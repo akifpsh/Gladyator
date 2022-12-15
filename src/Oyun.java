@@ -26,7 +26,7 @@ public class Oyun {
                 menu();
                 break;
             case 2:
-                //new Dukkan(this.kahraman);
+                new Market(this.kahraman);
                 menu();
                 break;
             case 3:
