@@ -3,16 +3,16 @@ public class Kahraman extends Canli {
 	private boolean savasdurum=false;
 	private int id;
 	private String isim;
-	private String kilic="Tahta";
-	private String zirh="Kumas";
-	private String yetenek;
+	private String kilicIsmi="Tahta";
+	private String zirhIsmi="Kumas";
+	private String yetenekIsmi;
+	private int yetenekHasari;
 	private int para;
 	private int deneyim;
 	private int level;
 	private int mana;
 	private int pot;
 	
-	// kılıç yetenek ve zırh objeleri !!!
 	
 	 public Kahraman(int can,int hasar,int id,String isim,int level,int para,int deneyim,int mana,int pot) {
 		 super(can,hasar);
@@ -38,28 +38,36 @@ public class Kahraman extends Canli {
 	public void setId(int id) {
 		this.id=id;
 	}
-	public String getKilic() {
-		return kilic;
+	public String getKilicIsmi() {
+		return kilicIsmi;
 	}
 
-	public void setKilic(String kilic) {
-		this.kilic = kilic;
+	public void setKilicIsmi(String kilicIsmi) {
+		this.kilicIsmi = kilicIsmi;
 	}
 
-	public String getZirh() {
-		return zirh;
-	}
-	public String getYetenek() {
-		return yetenek;
+	public String getZirhIsmi() {
+		return zirhIsmi;
 	}
 
-	public void setYetenek(String yetenek) {
-		this.yetenek = yetenek;
+	public void setZirhIsmi(String zirhIsmi) {
+		this.zirhIsmi = zirhIsmi;
 	}
 
+	public String getYetenekIsmi() {
+		return yetenekIsmi;
+	}
 
-	public void setZirh(String zirh) {
-		this.zirh = zirh;
+	public void setYetenekIsmi(String yetenekIsmi) {
+		this.yetenekIsmi = yetenekIsmi;
+	}
+	
+	public void setYetenekHasari(int yetenekHasari) {
+		this.yetenekHasari = yetenekHasari;
+	}
+
+	public int getYetenekHasari() {
+		return yetenekHasari;
 	}
 
 	public int getPot() {
@@ -109,8 +117,8 @@ public class Kahraman extends Canli {
 	 public void ozellikleriGoster() {
 		 System.out.println("Id= "+this.id);
 		 System.out.println("Isim= "+isim);
-		 System.out.println("Kılıç= "+kilic);
-		 System.out.println("Zırh= "+zirh);
+		 System.out.println("Kılıç= "+kilicIsmi);
+		 System.out.println("Zırh= "+zirhIsmi);
 		 System.out.println("Can= "+this.getCan());
 		 System.out.println("Hasar= "+this.getHasar());
 		 System.out.println("Level= "+this.level);

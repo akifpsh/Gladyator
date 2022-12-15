@@ -24,18 +24,9 @@ public int getHasar() {
 public void setHasar(int hasar) {
 	this.hasar=hasar;
 }
-public void hasarAl(int hasar) {
-	this.can=this.can-hasar;
-}
 public void ozellikleriGoster() {
 	System.out.println("Can= "+this.can);
 	System.out.println("Hasar= "+this.hasar);
-}
-
-
-public void ozellileriGoster() {
-	// TODO Auto-generated method stub
-	
 }
 
 
