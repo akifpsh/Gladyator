@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Market{
     private int secim;
-    //private Kahraman kahraman;
-    /*public kilicMarket(Kahraman kahraman){
+    private Kahraman kahraman;
+    public Market(Kahraman kahraman){
         this.kahraman = kahraman;
         WelcomeMenu();
-    }*/
+    }
     Scanner sc1=new Scanner(System.in);
 
     public void WelcomeMenu(){
@@ -23,24 +23,24 @@ public class Market{
 
         switch(this.secim){
             case 1:
-            new IksirMarket();
-            WelcomeMenu();
-            break;
+                new IksirMarket(kahraman);
+                WelcomeMenu();
+                break;
             case 2:
-            new KilicMarket();
-            WelcomeMenu();
-            break;
+                new KilicMarket(kahraman);
+                WelcomeMenu();
+                break;
             case 3:
-            new ZirhMarket();
-            WelcomeMenu();
-            break;
+                new ZirhMarket(kahraman);
+                WelcomeMenu();
+                break;
             case 4:
-            new YetenekMarket();
-            WelcomeMenu();
-            break;
+                new YetenekMarket(kahraman);
+                WelcomeMenu();
+                break;
             case 5:
-            System.out.println("Sokaga Döndun.");
-            break;
+                System.out.println("Sokaga Döndun.");
+                break;
         }
     }    
 }

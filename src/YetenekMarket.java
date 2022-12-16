@@ -1,18 +1,19 @@
-
 import java.security.DrbgParameters.NextBytes;
 import java.text.BreakIterator;
 import java.util.Scanner;
 
 public class YetenekMarket extends Market{
-    private Kahraman kahraman;
-   public YetenekMarket(Kahraman kahraman){
-        this.kahraman = kahraman;
-        WelcomeMenu();
+    public YetenekMarket(Kahraman kahraman) {
+        super(kahraman);
     }
+private Kahraman kahraman;
 
     boolean SuYetenegi=false,AtesYetenegi=false;
+
     Scanner sc=new Scanner(System.in);
+
     private int secim;
+
     @Override
     public void WelcomeMenu() {
         System.out.println("YetenekMarkete Hos Geldiniz");
@@ -37,14 +38,18 @@ public class YetenekMarket extends Market{
         this.secim=sc.nextInt();
         switch(secim){
             case 1:
-                kahraman.setYetenekHasari(50);
+                kahraman.setYetenekIsmi("Su Gorili");
+                kahraman.setYetenekHasari(50); 
                 kahraman.setCan(kahraman.getCan()+100);
                 break;
             case 2:
-
+            kahraman.setYetenekIsmi("Yagmur");
+            kahraman.setCan(kahraman.getCan()+300);
                 break;
             case 3:
-
+            kahraman.setYetenekIsmi("Tsunami");
+            kahraman.setYetenekHasari(200); 
+            kahraman.setCan(kahraman.getCan()+200);
                 break;
         }
     }   
@@ -56,16 +61,21 @@ public class YetenekMarket extends Market{
         this.secim=sc.nextInt();
         switch(secim){
             case 1:
-
+                kahraman.setYetenekIsmi("Alevli meyve tabağı");
+                kahraman.setYetenekHasari(100); 
+                kahraman.setCan(kahraman.getCan()+50);
                 break;
             case 2:
-
+                kahraman.setYetenekIsmi("Ateş topu");
+                kahraman.setYetenekHasari(300); 
                 break;
             case 3:
-
+                kahraman.setYetenekIsmi("Lava");
+                kahraman.setYetenekHasari(200); 
+                kahraman.setCan(kahraman.getCan()+100);
                 break;
         }
-    }   
+    } 
 
     }
 }
