@@ -4,11 +4,12 @@ import java.text.BreakIterator;
 import java.util.Scanner;
 
 public class YetenekMarket extends Market{
-    //private Kahraman kahraman;
-   /*public YetenekMarket(Kahraman kahraman){
+    private Kahraman kahraman;
+   public YetenekMarket(Kahraman kahraman){
         this.kahraman = kahraman;
         WelcomeMenu();
-    }*/
+    }
+
     boolean SuYetenegi=false,AtesYetenegi=false;
     Scanner sc=new Scanner(System.in);
     private int secim;
@@ -36,7 +37,8 @@ public class YetenekMarket extends Market{
         this.secim=sc.nextInt();
         switch(secim){
             case 1:
-
+                kahraman.setYetenekHasari(50);
+                kahraman.setCan(kahraman.getCan()+100);
                 break;
             case 2:
 
