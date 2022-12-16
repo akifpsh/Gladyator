@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
 public class IksirMarket extends Market{
-    //mevcut can ve iksir miktarlari kahramandan alinacaktir test icin gecici olarak olusturulmustur.
-    //Kahraman kahraman;
-    //private Kahraman kahraman;
-   /*public kilicMarket(Kahraman kahraman){
-        this.kahraman = kahraman;
-        WelcomeMenu();
-    }*/
+    public IksirMarket(Kahraman kahraman) {
+        super(kahraman);
+    }
+private Kahraman kahraman;
+    
     Scanner sc1=new Scanner(System.in);
 
     @Override
@@ -21,27 +19,28 @@ public class IksirMarket extends Market{
         int secim=sc1.nextInt();
         switch(secim){
             case 1:
-
+                kahraman.getPot();
+                WelcomeMenu();
+                break;
             case 2:
-                //IksirSatinAl();
+                IksirSatinAl();
+                WelcomeMenu();
                 break;
             case 3:
                 System.out.println("Markete Donuyosun.");
                 break;
             default:
-                System.out.println("mal 1-2-3 Sayılarından Birini Gir.");
                 WelcomeMenu();
                 break;
         }
-       WelcomeMenu();
+       
     }
 
-    /*private void IksirSatinAl() {
-        System.out.println(this.kahraman.getPara);
-        System.out.println(MevcutIksir);
-        this.kahraman.setPara(-50);
-        this.kahraman.setMevcutIksir++;
+    private void IksirSatinAl() {
+        System.out.println(this.kahraman.getPara());
+        this.kahraman.setPara(kahraman.getPara()-50);
+        this.kahraman.setPot(kahraman.getPot()+1);
         WelcomeMenu();
-    }*/
+    }
     
 }
